@@ -12,9 +12,6 @@ const AudioPlayer = () => {
 
   return (
     <>
-   {!isPlaying && <div className='backdrop'>
-<button onClick={handlePlay}>وارد شوید :)</button>
-</div>}
 
 <MyQRCode />
 
@@ -22,6 +19,9 @@ const AudioPlayer = () => {
         <source src="Hengame-Ghasam Mikhoram.mp3" type="audio/mp3" />
         مرورگر شما از فرمت صوتی پشتیبانی نمی‌کند.
       </audio>
+   {!isPlaying && <div className='backdrop'>
+<button onClick={handlePlay}>وارد شوید :)</button>
+</div>}
     </>
   );
 };
