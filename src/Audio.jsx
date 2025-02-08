@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MyQRCode from './Code';
 
 const AudioPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,6 +15,8 @@ const AudioPlayer = () => {
    {!isPlaying && <div className='backdrop'>
 <button onClick={handlePlay}>وارد شوید :)</button>
 </div>}
+
+<MyQRCode />
 
       <audio id="audio-player" controls>
         <source src="Hengame-Ghasam Mikhoram.mp3" type="audio/mp3" />
